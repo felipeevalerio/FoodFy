@@ -2,7 +2,6 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/felipe-spindola/FoodFy">
@@ -52,38 +51,34 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-* Web
-.
-[![FoodFyGif][foodfy-gif]]
+<h3 align="center">Web</h3>
+<p align="center">
+    <img src="/public/assets/foodfy.gif" alt="FoodFy"></img>
+</p>
 <br/>
 <br/>
+<h3 align="center">Mobile</h3>
+<p align="center">
+    <img src="/public/assets/mobile.gif" alt="FoodFy-Mobile"></img>
+</p>
 
-* Mobile
-.
-[![FoodFyGifMobile][foodfy-gif-mobile]]
 
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+FoodFy it's a webapp who i developed during the bootcamp Launchbase offered by Rocketseat.
 
 ### Features
-
+* 🙋 Create an account to manage recipes,chefs and users
+* 👩🏽‍🍳 Explore awesome recipes and chefs
+* 📨 Email system 
+* 📱 A responsive website for you can use on your cellphone
 
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Node.Js](https://getbootstrap.com)
+* [Express](https://expressjs.com/pt-br/)
 * [Nunjucks](https://jquery.com)
-* [Postgres SQL](https://www.postgresql.org)
-
+* [Postgres](https://www.postgresql.org)
+* [Multer](https://www.npmjs.com/package/multer)
 
 
 <!-- GETTING STARTED -->
@@ -150,7 +145,8 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Released in 2021. This project is under the <a href="https://github.com/LauraBeatris/foodfy/blob/master/LICENSE">MIT license</a>
+Made by Felipe Spíndola 😁
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
