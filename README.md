@@ -53,11 +53,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 * Web
+.
 [![FoodFyGif][foodfy-gif]]
 <br/>
 <br/>
 
 * Mobile
+.
 [![FoodFyGifMobile][foodfy-gif-mobile]]
 
 
