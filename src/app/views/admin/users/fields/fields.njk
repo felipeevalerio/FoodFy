@@ -1,0 +1,45 @@
+<div class="inputs">
+    <div class="item">
+        <h4>Nome Completo</h4>
+        <input 
+            type="text" 
+            name="name" 
+            placeholder="Digite seu nome Completo" 
+            value="{{user.name}}"
+            required 
+        >
+    </div>
+    <div class="item">
+        <h4>Email</h4>
+        <input class="{% if error and error != 'Você não tem permissão pra entrar nessa área' %}input-error{% endif %}"
+            type="email" 
+            name="email" 
+            placeholder="Digite seu email" 
+            value="{{user.email}}"
+            onblur="Validate.apply(this,'isEmail')"
+            required 
+        >
+            
+    </div>
+    <div class="item">
+        <h4>Senha</h4>
+        <p></p>
+        <input class="{% if error and error != 'Você não tem permissão pra entrar nessa área' %}input-error{% endif %}"
+            type="password"
+            name="password" 
+            placeholder="Digite sua senha" 
+            required 
+        >
+    </div>
+    {% if not user.id %}
+    <div class="item">
+        <h4>Confirme sua senha</h4>
+        <input class="{% if error %}input-error{% endif %}"
+            type="password" 
+            name="passwordRepeat" 
+            placeholder="Confirme sua senha" 
+            required
+        >
+    </div>
+    {% endif %}
+</div>

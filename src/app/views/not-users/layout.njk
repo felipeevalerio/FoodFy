@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block head %}
+        <title>FoodFy</title>
+    {% endblock %}
+
+    {% include "../parts/links.njk" %}
+
+</head>
+<body>
+
+    <header class="basic">
+        <div class="content-header">
+            <div class="logo_container">
+                <a href="/"><img src="/assets/logo.png" alt=""></a>
+            </div>
+            {% block index %}
+            <div class="menu-section">
+                <div class="menu-toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div id="links">
+                    <a href="/sobre" >Sobre</a>
+                    <a href="/recipes">Receitas</a>
+                    <a href="/chefs">Chefs</a>
+                </div> 
+                <div class="logout" style="grid-column:4/5;justify-self:flex-start;">
+                    <ul>
+                        <li class="account">
+                            <a href="{% if user.id %} /profile {% else %} /login {% endif %}">
+                                <i class="material-icons" style="margin-right:.5rem;">account_circle</i>
+                                Minha Conta    
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        {% block filter %} {% endblock filter%}
+            <div class="logout" style="grid-column:4/5;justify-self:flex-start;">
+                <ul>
+                    <li class="account">
+                        <a href="{% if user.id %} /profile {% else %} /login {% endif %}" style="color:black;">
+                            <i class="material-icons" style="margin-right:.5rem;color:black;">account_circle</i>
+                            Minha Conta    
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            {% endblock index%}
+
+        </div>
+    </header>
+    {% include "../parts/messages.njk" %}
+
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+    
+    <footer>
+        <p>Todos os direitos reservados, &copy; Receitas FoodFy</p>
+    </footer>
+
+    <script src="/scripts/current_page.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/register.js"></script> 
+    <script src="/scripts/recipe_script.js"></script>
+</html>

@@ -1,0 +1,82 @@
+<div class="inputs">
+    <div class="item">
+        <h4>Nome da Receita</h4>
+        <input type="text" name="title" value="{{item.title}}">
+    </div>
+
+    <div class="item">
+        <h4>Chefe</h4>
+        <select name="chef">
+        {% for chef in options %}
+            <option value="{{chef.id}}" {% if item.chef_id == chef.id %} selected {% endif %}>{{chef.name}}</option>
+        {% endfor%}
+        </select>
+    </div>
+
+    <div class="item">
+        <h4>Imagem Da Receita</h4>
+        <div id="photos_upload">
+            <input 
+                id="photos_input" 
+                type="file"
+                name="photos" 
+                multiple 
+                accept="image/*"
+                onchange="PhotosUpload.handleFileInput(event)">
+
+            <p class="add_photo"><i class="material-icons">add</i></p>
+        </div>
+        <div id="photos_preview">
+            {% if files %}
+                {% for image in files %}
+                <div class="photo" id="{{image.id}}">
+                    <img src="{{image.src}}" alt="{{image.name}}">
+                    <i class="material-icons" onclick="PhotosUpload.removeOldPhoto(event)">close</i>
+                </div>
+                {% endfor %}
+                <input type="hidden" name="removed_files">
+            {% endif %}
+            
+        </div>
+    </div>
+    <div class="item" id="ingredients">
+        <h4>Ingredientes</h4>
+        {% if item.ingredients %}
+            {% for ingredient in item.ingredients %}
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" value="{{ingredient}}" placeholder="Ingrediente" style ="margin-bottom:8px"/>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" value="{{ingredient}}" placeholder="Ingrediente" style ="margin-bottom:8px"/>
+            </div>
+
+        {% endif %}
+    </div>
+        <button type="button" class="add-ingredient">Adicionar igrediente</button>
+    
+    <div class="item" id="prepare">
+        <h4>Modo de Preparo</h4>
+        {% if item.preparation %}
+            {% for prepare in item.preparation %}
+            <div class="preparation">
+                <input type="text" name="preparation[]" value="{{prepare}}" placeholder="Novo Passo" style ="margin-bottom:8px">
+            </div>
+            {% endfor %}
+        {% else %}
+        <div class="preparation">
+            <input type="text" name="preparation[]" value="{{prepare}}" placeholder="Novo Passo" style ="margin-bottom:8px">
+        </div>
+        {% endif %}
+    </div>
+        <button type="button" class="add-ingredient" id="button_prepare">Adicionar um novo passo</button>
+    
+    <div class="item">
+        <h4>Informações Adicionais</h4>
+        <div class="info_area">
+            <textarea name="information">{{item.information}}</textarea>
+        </div>
+    </div>
+
+</div>  

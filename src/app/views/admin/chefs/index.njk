@@ -1,0 +1,40 @@
+{% extends "../admin_layout.njk"%}
+
+{% block head %}
+<title>FoodFy | Chefs</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="container">
+        <div class="title_container">
+            {% if user.is_admin %} 
+                <h3>Gerenciar Chefs</h3> 
+                <a href="/admin/chefs/register">Novo Chef</a>
+
+            {% else %} 
+                <h3>Visualizar Chefs</h3> 
+            {% endif %}
+
+        </div>
+
+        <div class="wrapper chef">
+           {% for item in items %}
+            
+            <div class="chefs_card" id={{item.id}}>
+               
+                    <div class="card__image">
+                        <img src="{{item.img}}" alt="{{item.name}}">
+                    </div>
+                    <div class="card__info">
+                        <p class="title__card">{{item.name}}</p>
+                        <a href="/admin/chefs/{{item.id}}" class="view">Visualizar</a>
+                    </div>
+               
+            </div>
+            {% endfor %}
+            
+
+        </div>
+    </div>
+
+{% endblock content %}

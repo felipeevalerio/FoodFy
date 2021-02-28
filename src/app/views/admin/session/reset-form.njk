@@ -1,0 +1,63 @@
+{% extends "../../not-users/layout.njk" %}
+
+{% block head %}
+<title>FoodFy | Recuperar Senha</title>
+<link rel="stylesheet" href="/styles/users.css">
+
+{% endblock head%}
+
+{% block index %}{% endblock index%}
+
+{% block content %}
+<form class="container user-login" action="/users/password-reset" method="POST">
+    <div class="header">
+        <div class="title">
+            <h1>Nova Senha</h1> 
+        </div>
+    </div>
+   
+    <div class="inputs">
+        <div class="item">
+            <h4>Email</h4>
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Digite seu email" 
+                value="{{user.email}}"
+                onblur="Validate.apply(this,'isEmail')"
+                required 
+            >
+                
+        </div>
+        <div class="item">
+            <h4>Senha</h4>
+            <input 
+                type="password"
+                name="password" 
+                placeholder="Digite sua senha" 
+                required 
+            >
+        </div>
+        <div class="item">
+            <h4>Confirme sua senha</h4>
+            <input 
+                type="password" 
+                name="passwordRepeat" 
+                placeholder="Confirme sua senha" 
+                required
+            >
+        </div>
+        <input type="hidden" name="token" value="{{token}}">
+
+    </div>
+
+
+    <div class="buttons">
+        <button type="submit" class="button login">Recuperar</button>
+    </div>
+</div> 
+    
+
+</form>
+<script src="/scripts/script.js"></script>
+{% endblock content %}

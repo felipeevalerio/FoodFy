@@ -1,0 +1,79 @@
+{% extends "../layout.njk" %}
+
+{% block head %}
+    <title>FoodFy | {{item.title}}</title>
+{% endblock head %}
+
+{% block content %}
+    <section class="recipe-container container">
+
+        <div class="gallery">
+            <div class="image">
+                <img src="{{item.files[0].src}}" alt="{{item.title}}">
+            </div>      
+        
+            <div class="gallery_preview">
+                {% for image in item.files %}
+                    <img 
+                        src="{{image.src}}" 
+                        alt="{{image.name}}" 
+                        {% if loop.index0 == 0 %}
+                        class="active"
+                        {% endif %}
+                        onclick="ImageGallery.setImage(event)">
+                {% endfor%}
+            </div>
+        </div>
+
+        <div class="title">
+            <h1>{{item.title}}</h1>
+            <p>por {{chef}}</p>
+        </div>
+
+        <div class="recipe-content">
+            <div class="ingredients">
+                <div class="grid">
+                    <h3>Ingredientes</h3>
+                    <p class="mostrar" id="pIngredients">Esconder</p>
+                </div>
+                <div class="ingredientsP" id="ingredientsP">
+                    <ul>
+                    {% for ingredient in item.ingredients %}
+                        <li>{{ingredient}}</li>
+                    {% endfor %}
+                    </ul>
+                </div> 
+            </div>
+
+            <div class="prepare">
+                <div class="grid">
+                    <h3>Modo de Preparo</h3>
+                    <p class="mostrar" id="pPrepare">Esconder</p>
+                </div>
+
+
+                <div class="prepareP" id="prepareP">
+                    <ul>
+                    {% for prepare in item.preparation %}
+                        <li>{{prepare}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="grid">
+                    <h3>Informações Adicionais</h3>
+                    <p class="mostrar" id="pInformation">Esconder</p>
+                </div>
+
+                <div class="infoP" id="infoP">
+                    <p>{{item.information}}</p>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+{% endblock %}

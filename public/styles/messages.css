@@ -1,0 +1,33 @@
+@keyframes hideMessage { 
+    to{
+        top: -50px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.messages{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: .2rem;
+    right: 3rem;
+    padding: 3rem;
+    width: 20%;
+    color: white;
+    opacity: 1;
+    animation:hideMessage 300ms 5s ease-out forwards;
+    z-index: 3;
+    border-radius: 4px;
+}
+
+.messages.error-alert{
+    background-color:#e74c3c;
+}
+.messages.sucess-alert{
+    background:rgb(122,182,30);
+}
+
+.item input.input-error{
+    border: 1px solid #e74c3c;
+}

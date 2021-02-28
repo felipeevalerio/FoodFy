@@ -1,0 +1,53 @@
+{% extends '../layout.njk'%}
+
+{% block head%}
+<title>FoodFy | {{chef.name}}</title>
+{% endblock head%}
+
+{% block content %}
+
+<div class="container">
+    <div class="header_chefs">
+        <h2>Chef: {{chef.name}}</h2>
+        {% if user.is_admin %} <a href="/admin/chefs/{{chef.id}}/edit">Editar Chef</a> {% endif %}
+    </div>
+
+    <div class="profile_container">
+        <div class="profile_image">
+            <img src="{{chef.img}}" alt="">
+        </div>
+        <div class="profile_name">
+            <h1>{{chef.name}}</h1>
+        </div>
+        <div class="profile_info">
+            <p>{{chef.total_recipes}}
+            {% if chef.total_recipes == "1" %} Receita {% else %} Receitas {% endif %}
+            </p>
+        </div>
+    </div>
+
+    <div class="recipes">
+        <h2>Receitas</h2>
+        <div class="wrapper recipes">
+            {% for item in recipes %}
+          
+                <div class="recipe-card" id="{{item.id}}">
+                    
+                    <div class="card__image">
+                        <img src="{{item.img}}" alt="{{item.title}}">
+                    </div>
+                    
+                    <div class="card__info">
+                        <p class="title__card">{{item.title}}</p>
+                        <a href="/recipes/{{item.id}}" class="view">Visualizar</a>
+                    </div>
+
+                </div>
+        {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock content%}

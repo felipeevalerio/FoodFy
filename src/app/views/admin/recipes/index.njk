@@ -1,0 +1,37 @@
+{% extends "../admin_layout.njk" %}
+
+{% block head %}
+<title>FoodFy | Receitas</title>
+{% endblock head%}
+
+{% block content %}
+     
+    <div class="container">
+        <div class="title_container">
+            <h3>Gerenciar Receitas</h3>            
+            <a href="/admin/recipes/create">Nova Receita</a>  
+        </div>
+
+        <div class="content">
+           {% for item in items %}
+            
+            <div class="card" id={{item.id}}>
+                <a href="/admin/recipes/{{item.id}}">
+                    <div class="card__image">
+                        <img src="{{item.img}}" alt="{{item.title}}">
+                    </div>
+                    <div class="card__info">
+                        <p class="title__card">{{item.title}}</p>
+                        <p class="info__card">por {{item.chef.name}}</p>
+                    </div>  
+                </a>
+            </div>
+            {% endfor %}
+            
+
+        </div>
+    </div>
+
+{% endblock content %}
+
+

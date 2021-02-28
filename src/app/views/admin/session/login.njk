@@ -1,0 +1,37 @@
+{% extends "../../not-users/layout.njk" %}
+
+{% block head %}
+<title>FoodFy | Login</title>
+<link rel="stylesheet" href="/styles/users.css">
+{% endblock head%}
+
+
+
+{% block index %}
+<div class="button-register" style="margin-top:2rem;">
+    <a href="/register" class="button">Registre-se</a>
+</div>
+
+{% endblock index%}
+
+
+{% block content %}
+<form class="container user-login" action="/users/login" method="POST">
+    <div class="header">
+        <div class="title">
+            <h1>Iniciar Sessão</h1> 
+        </div>
+    </div>
+   
+    {% include "./fields/fields-login.njk" %}
+
+    <div class="buttons login">
+            <a href="/users/forgot-password">Perdeu a senha?</a>
+        <button type="submit" class="button login">Acessar</button>
+    </div>
+</div> 
+    
+
+</form>
+<script src="/scripts/script.js"></script>
+{% endblock content %}

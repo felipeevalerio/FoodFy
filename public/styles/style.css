@@ -1,0 +1,224 @@
+
+:root{
+    --gray-color: #777777;
+}
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body,html{
+    font-family: "Roboto",sans-serif;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    overflow-x: hidden !important;
+
+}
+
+header .content-header{
+    min-height:10vh;
+    display: grid;
+    grid-template-columns: .8fr 1.5fr 2fr 1fr;
+    gap: 1rem;
+    left: 0;
+    top: 0;
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+header.basic .content-header form{
+    width: 80%;
+    align-self: center;
+    justify-self: end;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+header .content-header form input{
+    padding: 12px;
+    border:1px solid #999;
+    border-radius: 8px;
+    margin-right: 12px;
+
+}
+
+header .content-header form button.filter{
+    color: white;
+    font-weight: 700;
+    background-color: #6558C3;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.logo_container{
+    justify-self: left;
+    margin: 4vh;
+    margin-left:30px;
+    width: 100%;
+}
+
+.menu-section{
+    display: flex;
+    align-items: center;
+}
+
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+#links a{
+    color:#111111;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+#links a:nth-child(3){
+    padding-right: 0;
+}
+
+.actived{
+    font-weight: 700;
+}
+
+
+#slider{
+    width: 90%;
+    max-width: 940px;
+    height: 366px;
+    background-color: #FBDFDB;
+    margin: 20px auto;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#slider-content{
+    width: 400px;
+    text-align: center;
+
+}
+
+#slider-content h1{
+    font-size: 32px;
+    line-height: 42px;
+    margin: 1vh;
+}
+
+#slider-content p {
+    font-size: 1.125rem;
+    opacity: .7;
+    line-height: 1.75rem;
+}
+
+#slider-image{
+    margin-right: 1rem;
+}
+
+
+
+/*  ===     Receitas-page-home   ===    */
+
+.card-area{
+    width: 90%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card-area h3{
+    font-size: 1.4rem;
+    align-self: center;
+    justify-self: left;
+    width: 100%;
+    margin-left:3rem;
+}
+
+.cards{
+    width: 100%;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card{
+    width: 100%;
+    cursor:pointer;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.cards a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__image img{
+    width: 100%;
+    border-radius: 15px;
+    height: 15vh;
+}
+
+.card__info{
+    align-items: center;
+}
+
+.title__card{
+    font-size:18px;
+    line-height: 28px;
+    color: #111111;
+}
+
+.info__card{
+    font-size: 14px;
+    color: #777777;
+}
+
+footer{
+    background: #EEEEEE;
+    height: 62px;
+    width: 100%;
+    margin-top: 80vh;
+}
+
+footer p {
+    text-align: center;
+    color: #999999;
+    line-height: 24px;
+    font-size: 14px;
+    padding-top: 22px;
+}
+
+/*Sobre / Recipes*/
+.highlighted{
+    font-weight: bold;
+    color: #111111;
+}

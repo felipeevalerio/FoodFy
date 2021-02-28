@@ -1,0 +1,35 @@
+{% extends "../admin_layout.njk" %}
+
+{% block head %}
+<title>FoodFy | {{user.name}}</title>
+{% endblock head%}
+
+
+{% block content %}
+<form class="container index-user" action="/users/admin/users?_method=PUT" method="POST" >
+    <div class="header">
+        <div class="title">
+            <h1>Editar Usuário : {{user.name}}</h1> 
+        </div>
+        <div class="buttons" style="justify-content:flex-end;">
+            <button type="submit" class="button">Salvar</button>
+        </div>
+    </div>
+   
+    {% include "./fields/fields-admin.njk" %}
+    <div class="isAdmin">
+        <input type="checkbox" name="is_admin"{% if user.is_admin %} checked {% endif %}>
+        <label for="is_admin">Administrador</label>
+
+    </div>
+    <input type="hidden" name="id" value="{{user.id}}">
+
+</div> 
+</form>
+
+<form action="/users/admin/users?_method=DELETE" method="post" class="form-delete">
+    <button class="delete" type="submit">Deletar</button>
+    <input type="hidden" name="id" value="{{user.id}}">
+</form>
+<script src="/scripts/script.js"></script>
+{% endblock content %}

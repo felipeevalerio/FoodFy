@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block head %}
+        <title>FoodFy | Admin</title>
+    {% endblock %}
+    {% include "../parts/links.njk" %}
+</head>
+<body>
+    {% include "../parts/messages.njk" %}
+    <header class="admin">
+        <div class="content-header">
+            <div class="logo_container">
+                <a href="/"><img src="/assets/logo_branca.png" alt=""></a>
+            </div>  
+            <div class="menu-section">
+                <div class="menu-toggle admin">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div id="links">
+                    <a href="/admin/recipes">Receitas</a>
+                    <a href="/admin/chefs">Chefs</a>
+                    <a href="/users/admin/users">Usuários</a>
+                </div> 
+                <div class="logout">
+                    <ul>
+                        <li class="account">
+                            <a href="/profile">
+                                <i class="material-icons" style="margin-right:.5rem">account_circle</i>
+                                Minha Conta    
+                            </a>
+                            <ul class="submenu">
+                                <li style="list-style:none;">
+                                    <form action="/users/logout" method="POST">
+                                        <button type="submit">Sair da conta</button>
+                                    </form>
+                                </li>
+                            </ul>    
+                        </li>
+
+                    </ul>
+
+                </div>
+                
+            </div>
+            <div class="logout">
+                <ul>
+                    <li class="account">
+                        <a href="/profile">
+                            <i class="material-icons" style="margin-right:.5rem">account_circle</i>
+                            Minha Conta    
+                        </a>
+                        <ul class="submenu">
+                            <li style="list-style:none;">
+                                <form action="/users/logout" method="POST">
+                                    <button type="submit">Sair da conta</button>
+                                </form>
+                            </li>
+                        </ul>    
+                    </li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+        
+    </header>
+    
+    {% block content %}{% endblock %}
+    
+    <script src="/scripts/current_page.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/register.js"></script> 
+    <script src="/scripts/recipe_script.js"></script>
+
+</body>
+<footer>
+    <p>Todos os direitos reservados, &copy; Receitas FoodFy</p>
+</footer>
+
+
+</html>

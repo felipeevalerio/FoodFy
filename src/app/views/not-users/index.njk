@@ -1,0 +1,45 @@
+{% extends "./layout.njk" %}
+
+{% block content %}
+    <div id="slider">
+        
+        <div id="slider-content">
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a construir os melhores pratos</p>
+            <p>com receitas criadas por profissionais</p>
+            <p>do mundo inteiro.</p>
+        
+        </div>
+        
+        <div id="slider-image">
+            <img src="assets/chef.png" alt="">
+        </div>
+    
+    </div>
+
+    <section class="card-area">
+        <h3>Mais acessadas</h3>
+        <div class="cards">
+        {% for item in items %}   
+            <a href="/recipes/{{item.id}}">
+                <div class="card" id="{{item.id}}">
+                    
+                    <div class="card__image">
+                        <img src="{{item.img}}" alt="{{item.title}}">
+                    </div>
+                    
+                    <div class="card__info">
+                        <p class="title__card">{{item.title}}</p>
+                        <p class="info__card">por {{item.chef.name}}</p>
+                    </div>
+
+                </div>
+            </a>
+        {% endfor %}
+
+        </div>
+
+    </section class="card-area">
+      
+<script src="scripts/recipe_script.js"></script>
+{% endblock %}

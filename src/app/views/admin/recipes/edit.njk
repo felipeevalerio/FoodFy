@@ -1,0 +1,30 @@
+{% extends "../admin_layout.njk" %}
+
+{% block head %}
+<title>{{item.title}} | FoodFy</title>
+{% endblock head %}
+
+{% block content %}
+<form action="/admin/recipes?_method=PUT" method="POST" class="container_register" enctype="multipart/form-data">
+
+    <div class="container">
+        <input type="hidden" name="id" value="{{item.id}}">   
+
+        <div class="header">
+            <div class="title">
+                <h3 class="register_title">Editar Receita</h3>
+            </div>
+            <div class="save_button">
+                <button type="submit" class="button">Salvar Receita</button>
+            </div>
+        </div>
+
+        {% include './fields.njk' %}
+
+</form>
+
+<form action="/admin/recipes?_method=DELETE" method="post" class="form_delete">
+        <input type="hidden" name="id" value="{{item.id}}"> 
+        <button type="submit" class="delete" onclick="alertDelete()">Deletar</button>
+</form>
+{% endblock content %}

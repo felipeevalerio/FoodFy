@@ -1,0 +1,148 @@
+
+.header_chefs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.header_chefs h2{
+    font-size: 1.4rem;
+}
+
+.header_chefs a{
+    padding: 8px 12px;
+    background-color: #6558C3 ;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.profile_container{
+    margin-top: 3vh;
+    width: 100%;
+    height: 50vh;
+
+}
+
+.profile_image{
+    display: flex;
+    align-self: center;
+    height: 25vh;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.profile_image img{
+    border-radius: 50%;
+    width:20%;
+    
+}
+
+.profile_name,
+.profile_info{
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    margin-top: 0.5vh;
+}
+
+.profile_name h1{
+    font-size: 1.8rem;
+}
+
+.profile_info p {
+    color: #555555;
+}
+
+
+/*Chefs*/
+
+.wrapper{
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3rem;
+}
+
+.container .wrapper.chef{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+}
+
+.container .wrapper.chef .chefs_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.chefs_card .card__image{
+    width: 50%;
+    height: 100%;
+
+}
+
+.chefs_card .card__image img{
+    border-radius: 50%;
+    width: 80%;
+}
+
+.container .wrapper.chef .chefs_card .card__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+}
+
+.title__card{
+    margin-top: 2vh;
+}
+
+.view{
+    color: #6558C3;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.card-email {
+    color: #333;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.card-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-self: flex-start;
+}
+
+.card-actions  .delete-button{
+    color: rgb(206, 26, 26);
+    background: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+.title_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title_container a{
+    padding: 12px 24px;
+    color: white;
+    background:#6558C3;
+    border-radius: 8px;
+}

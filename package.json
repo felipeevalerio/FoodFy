@@ -1,0 +1,33 @@
+{
+  "name": "FoodFy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm-run-all -p nodemon browsersync",
+    "nodemon": "nodemon src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:3002 --files 'views,public'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Japoringa/FoodFy-Rocketseat.git"
+  },
+  "homepage": "https://github.com/Japoringa/FoodFy-Rocketseat#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^6.2.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "faker": "^5.4.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.17",
+    "nunjucks": "^3.2.2",
+    "pg": "^8.4.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5"
+  }
+}

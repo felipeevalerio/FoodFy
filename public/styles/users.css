@@ -1,0 +1,61 @@
+header{
+    display:flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+header .button-register{
+    position: absolute;
+    right: 15vw;
+}
+header .button-register a{
+    padding:8px 16px;
+    font-weight: 400;
+    
+}
+
+.container .wrapper.users-wrapper{
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.user-login .header .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.user-login .buttons,
+.user .buttons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 8px 0 ;
+}
+
+
+.user-login .buttons a{
+    color: #777;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+.buttons.login{
+    justify-content: space-between;
+}
+
+
+.button.login{
+    padding: 10px 20px;
+}
+
+
+.user-login{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+}

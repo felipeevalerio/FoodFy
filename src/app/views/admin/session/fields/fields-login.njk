@@ -1,0 +1,24 @@
+<div class="inputs">
+    <div class="item">
+        <h4>Email</h4>
+        <input class="{% if error and error != 'Você não tem permissão pra entrar nessa área' %}input-error{% endif %}"
+            type="email" 
+            name="email" 
+            placeholder="Digite seu email" 
+            value="{{user.email}}"
+            onblur="Validate.apply(this,'isEmail')"
+            required 
+        >
+            
+    </div>
+    <div class="item">
+        <h4>Senha</h4>
+        <p></p>
+        <input class="{% if error and error != 'Você não tem permissão pra entrar nessa área' %}input-error{% endif %}"
+            type="password"
+            name="password" 
+            placeholder="Digite sua senha" 
+            required 
+        >
+    </div>
+</div>

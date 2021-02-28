@@ -1,0 +1,29 @@
+<div class="inputs">
+    <div class="item">
+        <h4>Nome Completo</h4>
+        <input type="text" name="name" value="{{chef.name}}" required>
+    </div>
+    <div class="item">
+        <h4>Imagem Do Chefe</h4>
+        <div id="photos_upload">
+            <input 
+                id="photos_input" 
+                type="file"
+                name="photos" 
+                accept="image/*"
+                style="width:100%;"
+                onchange="PhotosUploadChefs.handleFileInput(event)">
+            <button class="button" >Enviar Avatar</button>
+        </div>
+        <div id="photos_preview">
+            {% if files %}
+                <div class="photo" id="{{files.id}}">
+                    <img src="{{files.src}}" alt="{{files.name}}">
+                    <i class="material-icons" onclick="PhotosUploadChefs.removeOldPhoto(event)">close</i>
+                </div>
+                <input type="hidden" name="removed_files">
+            {% endif %}
+
+        </div>
+    </div>
+</div>

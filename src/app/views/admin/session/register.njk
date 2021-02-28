@@ -1,0 +1,29 @@
+{% extends "../../not-users/layout.njk" %}
+
+{% block head %}
+<title>FoodFy | Registre-se</title>
+<link rel="stylesheet" href="/styles/users.css">
+{% endblock head%}
+
+
+{% block index %}{% endblock index%}
+
+{% block content %}
+<form class="container user" action="/users/register" method="POST">
+    <div class="header">
+        <div class="title">
+            <h1>Registre-se</h1> 
+        </div>
+    </div>
+   
+    {% include "./fields/fields.njk" %}
+
+    <div class="buttons">
+        <button type="submit" class="button">Cadastrar</button>
+    </div>
+</div> 
+    
+
+</form>
+<script src="/scripts/script.js"></script>
+{% endblock content %}

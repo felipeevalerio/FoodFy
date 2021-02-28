@@ -1,0 +1,38 @@
+{% extends "../admin_layout.njk"%}
+
+{% block head %}
+<title>FoodFy | Usuários</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="container">
+        <div class="title_container">
+            <h3>Gerenciar Usuários</h3>
+            <a href="/users/admin/users/create">Novo Usuário</a>  
+        </div>
+
+        <div class="wrapper users-wrapper">
+
+           {% for item in items %}
+                {% if item.id != userId %}
+                <div class="users_card" id={{item.id}}>
+
+                        <div class="card__info">
+                            <p class="title__card">{{item.name}}</p>
+                            <p class="card-email">{{item.email}}</p>
+                            <div class="card-actions">
+                                <a href="/users/admin/users/{{item.id}}" class="view">Editar</a>
+                                <a href="/users/admin/users/{{item.id}}" class="delete-button">Remover</a>
+                            </div>
+
+                        </div>
+                
+                </div>
+                {% endif %}
+            {% endfor %}
+            
+
+        </div>
+    </div>
+
+{% endblock content %}

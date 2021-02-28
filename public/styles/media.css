@@ -1,0 +1,211 @@
+/* HOME */
+
+@media (max-width:1260px){
+    .edit{
+        right:50px ;
+        width: 100px;
+    }
+}
+
+@media (max-width:1260px){
+    .edit{
+        right: 50px;
+        width: 70px;
+    }
+}
+
+
+@media (max-width:768px) {
+    html{
+        font-size: 90%;
+    }
+    form .delete{
+        top: 3.5vh;
+        left:50%;
+        transform: translateX(-40%);
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .edit{
+        top: 4vh;
+        left:50%;
+        transform: translateX(-40%);
+        max-width: 200px;
+        width: 100%;
+    }
+
+
+    /* HEADER */
+    header.basic .content-header form{
+        grid-column: 2/3;
+        width: 100%;
+        display: flex;
+    }
+
+    #links,.logout{
+        display: none;
+    }
+
+    .menu-section{
+        grid-column: 4/5;
+        grid-row: 1/2;
+        align-self: center;
+        margin-bottom: 8px;
+        justify-self: flex-end;
+    }
+    
+    .menu-section .menu-toggle{
+        height: 30px;
+        width: 40px;
+        cursor: pointer;
+    }
+    
+    .menu-section .menu-toggle .one,
+    .menu-section .menu-toggle .two,
+    .menu-section .menu-toggle .three{
+        background: black;
+        opacity: .8;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        margin: 6px auto;
+
+        transition: 200ms ease-in-out;
+    }
+    
+    .menu-toggle.admin .one,
+    .menu-toggle.admin .two,
+    .menu-toggle.admin .three{
+        background: white;
+    }
+
+
+    .menu-section.on{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        transition: 100ms ease-in-out;
+        
+    }
+
+    .menu-section.on .menu-toggle{
+        position: absolute;
+        top: 18px;
+        right:35px;
+    }
+
+    .menu-section.on .menu-toggle .one,
+    .menu-section.on .menu-toggle .two,
+    .menu-section.on .menu-toggle .three{
+        background: white;
+    }
+
+    .menu-section.on .menu-toggle .one{
+        transform: rotate(45deg) translate(7px,7px);
+    }
+
+    .menu-section.on .menu-toggle .two{
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three{
+        transform: rotate(-45deg) translate(8px,-9px);
+    }
+
+    .menu-section.on #links{
+        text-align: center;
+        display: initial;
+    }
+
+    .menu-section.on #links a{
+        color: #fff;
+        display: block;
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+
+    .menu-section.on #links a:nth-child(3){
+        padding-right: 1rem;
+    }
+
+    .menu-section.on .logout{
+        position: absolute;
+        display: initial;
+        top: 18px;
+        left: 15px;
+        width: 50%;
+    }
+
+
+
+    /* FINAL -- HEADER */
+
+
+    /* HOME */
+
+    #slider{
+        flex-direction: column;
+        justify-content: center;
+        min-height:420px;
+    }
+
+    #slider-image{
+        height:180px;
+        order:-1;
+    }
+    #slider-image img{
+        height: 100%;
+    }
+    #slider-content{
+        width: 90%;
+        text-align: center;
+    }
+
+    /* FINAL -- HOME*/
+
+    /* SOBRE */
+
+    .content_sobre h1{
+        font-size: 1.2rem;
+        line-height: 1.825rem;
+    }
+    .content_sobre.subtitles h2{
+        font-size: 1.05rem;
+        line-height:1.675rem;
+
+    }
+    .content_sobre p {
+        font-size: .9rem;
+        line-height: 1.525rem;
+    }
+
+    /*Final -- Sobre*/
+
+    /* CHEF */
+    .profile_image img{
+        width: 30%;
+    }
+
+    /* Final -- Chef*/
+    
+    /* MESSAGES*/
+    .messages{
+        width: 100%;
+        top: 0;
+        left:0;
+        padding: 1rem;
+    }
+    /* Final -- Messages*/
+}
+
+@media (max-width:450px){
+    form .delete{
+        max-width: 100px;
+        left: 55%;
+    }
+}   

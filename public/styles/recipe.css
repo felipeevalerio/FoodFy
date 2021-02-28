@@ -1,0 +1,135 @@
+.title{
+    text-align: center;
+}
+.title h1{
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.title p {
+    font-size: 22px;
+    color: var(--gray-color);
+}
+
+.recipe-content{
+    width: 90%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    margin:32px auto
+}
+
+.recipe-content h3{
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+section li{
+    max-width: 800px;
+    width: 100%;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin: .5rem 4rem 1rem;
+}
+
+.info p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+    margin: 0.5rem 3rem 1rem;
+}
+
+/*  ===     Mostrar      === */
+
+.ingredientsP.hidden,
+.prepareP.hidden,
+.infoP.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+.mostrar,
+#pInformation{
+    color:#999999 ;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.grid{
+    display: flex;  
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.edit{
+    cursor: pointer;
+    text-align: center;
+    padding: 8px;
+    width: 200px;
+    border-radius: 6px;
+    background-color: rgb(235, 79, 79);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    position: absolute;
+    right: 150px;
+    top: 200px;
+}
+
+/* Product Gallery */
+
+.gallery{
+    width: 100%;
+}
+.gallery .image > img {
+    width: 90%;
+    height: 280px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: zoom-in;
+}
+
+.gallery_preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 8px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery_preview img{
+    height: 80px;
+    width: 80%;
+    justify-self: center;
+    object-fit: contain;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.gallery_preview img:hover,
+.gallery_preview img.active{
+    opacity: 1;
+    transition: 200ms;
+}
+
+
+.image{
+    text-align: center;
+    margin:15px auto;
+    max-width: 600px;
+    width: 100%;
+}
+.image img{
+    border-radius: 15px;
+    max-height: 200px;
+}
