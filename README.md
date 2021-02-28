@@ -73,44 +73,51 @@ FoodFy it's a webapp who i developed during the bootcamp Launchbase offered by R
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Here we can see all the technologies that was used in this project.
+
+* [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 * [Node.Js](https://getbootstrap.com)
 * [Express](https://expressjs.com/pt-br/)
 * [Nunjucks](https://jquery.com)
 * [Postgres](https://www.postgresql.org)
 * [Multer](https://www.npmjs.com/package/multer)
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+First of all,to run the application you will need to install [Node](https://getbootstrap.com) and the database [Postgres](https://www.postgresql.org)
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Open the terminal 
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/felipe-spindola/FoodFy.git
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+4. Create a database on PostgresSQL
+   ```sh
+   CREATE DATABASE foodfy
    ```
+5. Create the tables on PostgresSQL using the file `database.sql`
 
+6. Open the file `db.js` inside the directory `src/config` and update your user and password.
+```JS
+    {
+        user:"your-username",
+        password:"your-password"
+    }
+```
+7. Use the file `seed.js` to populate your website.
+`node seed.js`
+8. Run and enjoy your application!
+`npm start`
 
 
 <!-- USAGE EXAMPLES -->
@@ -146,7 +153,10 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Released in 2021. This project is under the <a href="https://github.com/LauraBeatris/foodfy/blob/master/LICENSE">MIT license</a>
-Made by Felipe Spíndola 😁
+<br/>
+<p align="center">
+    Made by Felipe Spíndola 😁
+</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
