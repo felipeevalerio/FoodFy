@@ -118,7 +118,17 @@ module.exports = {
                 })
             }
 
-            const recipeId = await Recipe.create(req.body,req.session.userId)
+            const {chef:chef_id,title,ingredients,preparation,information} = req.body
+
+            const recipeId = await Recipe.create({
+                chef_id,
+                user_id: req.session.userId,
+                title,
+                ingredients,
+                preparation,
+                information
+            })
+            
             const filesPromise= sendFiles.map(async file =>{
                 const fileId = await File.create({
                     name:file.filename,
