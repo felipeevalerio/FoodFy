@@ -58,9 +58,7 @@ const Base = {
 
             Object.keys(fields).map(key =>{
                 keys.push(key)
-                Array.isArray(fields[key])
-                ? values.push(`'{"${fields[key].join('","')}"}'`)
-                : values.push(`'${fields[key]}'`);
+                values.push(`'${fields[key]}'`)
                     
             })
             
