@@ -101,14 +101,7 @@ async function createRecipes(){
                 user_id:usersIds[Math.floor(Math.random() * totalUsers)]
             })
         }
-        const recipesPromise = recipes.map(recipe => Recipe.create({
-            title:recipe.title,
-            ingredients:recipe.ingredients,
-            preparation:recipe.preparation,
-            information:recipe.information,
-            chef_id:recipe.chef,
-            user_id:recipe.user_id
-        }))
+        const recipesPromise = recipes.map(recipe => Recipe.create(recipe,recipe.user_id))
         let recipesIds = await Promise.all(recipesPromise)
 
         let files = []
