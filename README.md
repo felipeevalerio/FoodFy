@@ -140,7 +140,7 @@ If you find any problem in [FoodFy](https://github.com/felipe-spindola/FoodFy),i
 <!-- LICENSE -->
 ## 📋 License
 
-Released in 2021. This project is under the <a href="https://github.com/LauraBeatris/foodfy/blob/master/LICENSE">MIT license</a>
+Released in 2021. This project is under the <a href="https://github.com/felipeevalerio/foodfy/blob/master/LICENSE.txt">MIT license</a>
 <br/>
 <p align="center">
     Made by Felipe Valério 😁
