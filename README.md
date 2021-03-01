@@ -70,7 +70,7 @@ FoodFy it's a webapp who i developed during the bootcamp Launchbase offered by R
 * 📨 Email system 
 * 📱 A responsive website for you can use on your cellphone
 
-### Built With 🔧
+### 🔧 Built With 
 
 Here we can see all the technologies that was used in this project.
 
@@ -83,7 +83,7 @@ Here we can see all the technologies that was used in this project.
 * [Multer](https://www.npmjs.com/package/multer)
 
 <!-- GETTING STARTED -->
-## 🏃‍♂️ Getting Started 
+## 🏃‍ Getting Started 
 
 ### 👷 Prerequisites 
 
