@@ -84,13 +84,13 @@ Here we can see all the technologies that was used in this project.
 * [Multer](https://www.npmjs.com/package/multer)
 
 <!-- GETTING STARTED -->
-## Getting Started 👷
+## 🏃‍♂️ Getting Started 
 
-### Prerequisites
+### 👷 Prerequisites 
 
 First of all,to run the application you will need to install [Node](https://getbootstrap.com) and the database [Postgres](https://www.postgresql.org)
 
-### Installation ⚙️
+### ⚙️ Installation 
 
 1. Open the terminal 
 2. Clone the repo
@@ -125,7 +125,7 @@ First of all,to run the application you will need to install [Node](https://getb
 ```
 
 <!-- CONTRIBUTING -->
-## Contributing
+## 👪 Contributing
 
 If you find any problem in [FoodFy](https://github.com/felipe-spindola/FoodFy),i will be so grateful if you create a new issue on [FoodFy-Issues](https://github.com/felipe-spindola/FoodFy/issues). Pull requests are also welcome!!
 
