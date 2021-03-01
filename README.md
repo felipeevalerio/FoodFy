@@ -84,13 +84,13 @@ Here we can see all the technologies that was used in this project.
 * [Multer](https://www.npmjs.com/package/multer)
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Getting Started 👷
 
 ### Prerequisites
 
 First of all,to run the application you will need to install [Node](https://getbootstrap.com) and the database [Postgres](https://www.postgresql.org)
 
-### Installation
+### Installation ⚙️
 
 1. Open the terminal 
 2. Clone the repo
@@ -116,6 +116,7 @@ First of all,to run the application you will need to install [Node](https://getb
 ```
 7. Use the file `seed.js` to populate your website.
 `node seed.js`
+
 8. Run and enjoy your application!
 `npm start`
 
@@ -127,26 +128,18 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+If you find any problem in [FoodFy](https://github.com/felipe-spindola/FoodFy),i will be so grateful if you create a new issue on [FoodFy-Issues](https://github.com/felipe-spindola/FoodFy/issues). Pull requests are also welcome!!
+
+**How can i create a pull request?** 🤷🏻‍♂️
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
 
 
 <!-- LICENSE -->
@@ -160,17 +153,9 @@ Released in 2021. This project is under the <a href="https://github.com/LauraBea
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/felipe-spindola/FoodFy/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-<!-- [linkedin-url]: https://linkedin.com/in/othneildrew -->
-[foodfy-gif]: /public/assets/foodfy.gif 
-[foodfy-gif-mobile]: /public/assets/mobile.gif 
+[linkedin-url]: https://linkedin.com/in/felipeevalerio
