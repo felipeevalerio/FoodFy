@@ -151,6 +151,6 @@ Released in 2021. This project is under the <a href="https://github.com/LauraBea
 [issues-shield]: https://img.shields.io/github/issues/felipeevalerio/FoodFy.svg?style=for-the-badge
 [issues-url]: https://github.com/felipeevalerio/FoodFy/issues
 [license-shield]: https://img.shields.io/github/license/felipeevalerio/FoodFy.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/felipeevalerio/FoodFy/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/felipeevalerio
