@@ -71,7 +71,7 @@ FoodFy it's a webapp who i developed during the bootcamp Launchbase offered by R
 * 📨 Email system 
 * 📱 A responsive website for you can use on your cellphone
 
-### Built With
+### 🔧 Built With
 
 Here we can see all the technologies that was used in this project.
 
@@ -139,7 +139,7 @@ If you find any problem in [FoodFy](https://github.com/felipe-spindola/FoodFy),i
 
 
 <!-- LICENSE -->
-## License
+## 📋 License
 
 Released in 2021. This project is under the <a href="https://github.com/LauraBeatris/foodfy/blob/master/LICENSE">MIT license</a>
 <br/>
