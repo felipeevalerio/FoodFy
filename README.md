@@ -95,7 +95,7 @@ First of all,to run the application you will need to install [Node](https://getb
 1. Open the terminal 
 2. Clone the repo
    ```sh
-   git clone https://github.com/felipe-spindola/FoodFy.git
+   git clone https://github.com/felipeevalerio/FoodFy.git
    ```
 3. Install NPM packages
    ```sh
@@ -144,7 +144,7 @@ If you find any problem in [FoodFy](https://github.com/felipe-spindola/FoodFy),i
 Released in 2021. This project is under the <a href="https://github.com/LauraBeatris/foodfy/blob/master/LICENSE">MIT license</a>
 <br/>
 <p align="center">
-    Made by Felipe Spíndola 😁
+    Made by Felipe Valério 😁
 </p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
