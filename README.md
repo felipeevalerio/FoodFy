@@ -115,10 +115,14 @@ First of all,to run the application you will need to install [Node](https://getb
     }
 ```
 7. Use the file `seed.js` to populate your website.
-`node seed.js`
+```sh
+    node seed.js
+```
 
 8. Run and enjoy your application!
-`npm start`
+```sh
+    npm start
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
