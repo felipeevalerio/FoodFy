@@ -62,7 +62,7 @@
 </p>
 
 
-FoodFy it's a webapp who i developed during the bootcamp Launchbase offered by Rocketseat.
+FoodFy it's a webapp which i developed during the bootcamp Launchbase offered by Rocketseat.
 
 ### Features
 * 🙋 Create an account to manage recipes,chefs and users
