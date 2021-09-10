@@ -8,8 +8,7 @@
     ],
     "routes":[
         {
-            "src":"./src/routes/",
-            "dest:":"/"
+            "src":"./src/routes/"
         }
     ]
 
