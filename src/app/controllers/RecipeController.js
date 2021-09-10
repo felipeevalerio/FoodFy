@@ -15,7 +15,7 @@ module.exports = {
                 return recipe
             })
     
-            const recipes = await Promise.all(recipesPromise)
+            const recipes = await Promise.all(recipesPromise);
             return res.render("not-users/index", { items: recipes})
         } catch (err) {
           console.error(err)    

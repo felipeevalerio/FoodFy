@@ -14,13 +14,12 @@ async function getFiles(recipeId){
 async function format(recipe){
     try {
         const files = await getFiles(recipe.id)
-        recipe.img = files[0]?.src == undefined ? "/assets/burger.png" : files[0].src
+        recipe.img = files[0]?.src == undefined ? "/assets/burger.png" : files[0].src        
         recipe.files = files
         return recipe
     } catch (err) {
         console.error(err);
     }
-
 }
 
 const recipeService = {
