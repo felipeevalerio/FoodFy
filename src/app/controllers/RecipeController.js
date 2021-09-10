@@ -15,11 +15,10 @@ module.exports = {
                 return recipe
             })
     
-          const recipes = await Promise.all(recipesPromise)
-    
-          return res.render("not-users/index", { items: recipes})
+            const recipes = await Promise.all(recipesPromise)
+            return res.render("not-users/index", { items: recipes})
         } catch (err) {
-          console.error(err)
+          console.error(err)    
         }
     
     },

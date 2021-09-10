@@ -2,9 +2,15 @@ const User = require("./src/app/models/User")
 const Recipe = require("./src/app/models/Recipe")
 const File = require("./src/app/models/File")
 const Chef = require("./src/app/models/Chef")
-
+const axios = require("axios").default;
 const faker = require("faker")
 const {hash} = require("bcryptjs")
+
+async function getRecipes(){
+    const response = await axios.get("https://recipes-api.vercel.app/api/meals/breakfast")
+    const recipes = response.data;
+    return recipes;
+}
 
 
 let usersIds = [],
@@ -15,6 +21,7 @@ let usersIds = [],
 
 async function createUsers(){
     try {
+        
         let users = []
         while(users.length < 3){
             users.push({
@@ -89,30 +96,35 @@ async function createChefs(){
 
 async function createRecipes(){
     try {
-        let recipes = []
-
-        while(recipes.length < totalRecipes){
-            recipes.push({
-                title:faker.lorem.word(),
-                ingredients:[faker.lorem.words(2),faker.lorem.words(2)],
-                preparation:[faker.lorem.words(2),faker.lorem.words(2),faker.lorem.words(2)],
-                information:faker.lorem.paragraph(Math.floor(Math.random() * 10)),
-                chef:chefsIds[Math.floor(Math.random() * totalChefs)],
-                user_id:usersIds[Math.floor(Math.random() * totalUsers)]
-            })
-        }
-        const recipesPromise = recipes.map(recipe => Recipe.create(recipe,recipe.user_id))
+        const recipes = await getRecipes();
+        const filteredRecipes = [];
+        Array.from(recipes).filter((recipe,index) => {
+            if(index < totalRecipes){
+                filteredRecipes.push({
+                    title:recipe.name,
+                    ingredients:[...recipe.ingredients],
+                    preparation:[...recipe.preparation],
+                    information:recipe.name,
+                    chef:chefsIds[Math.floor(Math.random() * totalChefs)],
+                    user_id:usersIds[Math.floor(Math.random() * totalUsers)],
+                    image_url:recipe.image
+                })
+            }
+            }
+        );
+        const recipesPromise = filteredRecipes.map(recipe => Recipe.create(recipe,recipe.user_id))
         let recipesIds = await Promise.all(recipesPromise)
 
         let files = []
 
-        while(files.length < recipes.length * 4){
+        filteredRecipes.forEach(recipe => {
             files.push({
-                name:faker.image.image(),
-                path:`/assets/espaguete.png`,
-                recipe_id:recipesIds[Math.floor(Math.random() * totalRecipes)]
+                name:recipe.title,
+                path:recipe.image_url,
+                recipe_id:recipesIds[Math.floor(Math.random() * totalRecipes)],
+
             })
-        }
+        })
 
         const filesPromise = files.map(async file => {
             const fileId = await File.create({

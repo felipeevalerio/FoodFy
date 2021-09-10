@@ -40,11 +40,13 @@ header .content-header{
 }
 
 header.basic .content-header form{
-    width: 80%;
+    width: 100%;
     align-self: center;
     justify-self: end;
     grid-column: 3/4;
     grid-row: 1/2;
+    padding-left: 32px;
+    display: flex;    
 }
 
 header .content-header form input{
@@ -170,7 +172,6 @@ header .content-header form button.filter{
     display: grid;
     align-self: center;
     justify-self: center;
-    
 }
 
 .cards a{
@@ -181,14 +182,34 @@ header .content-header form button.filter{
     justify-content: center;
 }
 
+.card > a{
+    border: 1px solid #fff;
+    padding: 1rem .5rem ;
+    border-radius: 4px;
+    transition: border-color .2s ease,transform.2s ease;
+}
+
+.card > a:hover{
+    border-color: #111111;
+    transform: translateY(-15px);
+}
+
+.card__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card__image img{
     width: 100%;
-    border-radius: 15px;
-    height: 15vh;
+    border-radius: 16px;
+    max-height: 122px;
+    max-width: 217px;
 }
 
 .card__info{
     align-items: center;
+    text-align: center;
 }
 
 .title__card{

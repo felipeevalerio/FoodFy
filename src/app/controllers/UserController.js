@@ -18,7 +18,7 @@ module.exports = {
     },
     async register(req, res) {
         try {
-            const allFields = checkAllFields()
+            const allFields = checkAllFields(req.body)
             if(allFields)
                 return res.render("admin/session/register",{
                     user:req.body,

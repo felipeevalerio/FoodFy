@@ -156,7 +156,8 @@ CREATE TABLE public.recipes (
     information text,
     created_at timestamp without time zone DEFAULT now(),
     user_id integer,
-    updated_at timestamp without time zone DEFAULT now()
+    updated_at timestamp without time zone DEFAULT now(),
+    image_url text
 );
 
 

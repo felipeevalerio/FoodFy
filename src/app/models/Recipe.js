@@ -12,8 +12,9 @@ module.exports = {
             ingredients,
             preparation,
             information,
-            user_id
-        )VALUES($1,$2,$3,$4,$5,$6)
+            user_id,
+            image_url
+        )VALUES($1,$2,$3,$4,$5,$6,$7)
         RETURNING id`
 
         const values = [
@@ -22,9 +23,9 @@ module.exports = {
             data.ingredients,
             data.preparation,
             data.information,
-            userId
+            userId,
+            data.image_url
         ]
-
         const results = await db.query(query,values)
         return results.rows[0].id
     },

@@ -7,15 +7,20 @@ async function getFiles(recipeId){
         ...file,
         src:`${file.path.replace("public","")}`
     }))
-
+    
     return files
 }
 
 async function format(recipe){
-    const files = await getFiles(recipe.id)
-    recipe.img = files[0].src
-    recipe.files = files
-    return recipe
+    try {
+        const files = await getFiles(recipe.id)
+        recipe.img = files[0]?.src == undefined ? "/assets/burger.png" : files[0].src
+        recipe.files = files
+        return recipe
+    } catch (err) {
+        console.error(err);
+    }
+
 }
 
 const recipeService = {

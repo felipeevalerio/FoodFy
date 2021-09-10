@@ -40,7 +40,6 @@
     header.basic .content-header form{
         grid-column: 2/3;
         width: 100%;
-        display: flex;
     }
 
     #links,.logout{
