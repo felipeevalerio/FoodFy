@@ -1,3 +1,6 @@
 node_modules
 bootcamp-launchbase-desafios-10-master
 images
+
+.vercel
+now.json

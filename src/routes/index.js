@@ -12,6 +12,7 @@ routes.use("/users",userRoutes)
 routes.use("/profile",profileRoutes)
 routes.use("/admin",adminRoutes)
 
+
 routes.get('/',Recipe.index)
 
 routes.get('/sobre',(req,res)=>{
