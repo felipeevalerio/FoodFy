@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "npm-run-all -p nodemon browsersync",
+    "dev": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon src/server.js",
     "browsersync": "browser-sync start --proxy http://localhost:3002 --files 'views,public'",
-    "build":"node src/server.js"
+    "start":"node src/server.js"
   },
   "repository": {
     "type": "git",
