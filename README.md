@@ -139,7 +139,7 @@ If you find any problem in [FoodFy](https://github.com/felipe-spindola/FoodFy),i
 
 ## 🌎 Explore the Project
 <p align="center">
-  <a href="foodfy-project.herokuapp.com/"><strong>Explore the project »</strong></a>
+  <a href="foodfy-project.herokuapp.com/"><strong>Acess FoodFy »</strong></a>
 </p>
   
 
