@@ -13,7 +13,7 @@
   <p align="center">
     An awesome WEB APP for Management of recipes and chefs - RocketSeat LaunchBase
     <br />
-    <a href="foodfy-project.herokuapp.com/"><strong>Explore the project »</strong></a>
+    <a href="https://foodfy-project.herokuapp.com/"><strong>Explore the project »</strong></a>
     <br />
     <br />
     ·
@@ -46,6 +46,13 @@
   </ol>
 </details>
 
+
+
+## 🌎 Explore the Project
+<p align="center">
+  <a href="https://foodfy-project.herokuapp.com/"><strong>Acess FoodFy »</strong></a>
+</p>
+  
 
 
 <!-- ABOUT THE PROJECT -->
@@ -137,11 +144,6 @@ If you find any problem in [FoodFy](https://github.com/felipe-spindola/FoodFy),i
 5. Open a Pull Request
 
 
-## 🌎 Explore the Project
-<p align="center">
-  <a href="https://foodfy-project.herokuapp.com/"><strong>Acess FoodFy »</strong></a>
-</p>
-  
 
 <!-- LICENSE -->
 ## 📋 License
